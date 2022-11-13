@@ -58,6 +58,17 @@ public class Panthera extends PantheraGPS {
 
     }
 
+    // Updating method to account for new speed() attribute
+    @Override // override superclass method
+    public void move() {
+        //New Random Variable to represent period of time spent moving
+        Random timeRandomLat = new Random();
+        Random timeRandomLong = new Random();
+
+        this.latitude(this.latitude() + (timeRandomLat.nextFloat(2)-1) * this.speed);
+        this.longitude(this.longitude() + (timeRandomLong.nextFloat(2)-1) * this.speed);
+    }
+
     // Weight of the panthera
     public Integer weight() {
         return weight;

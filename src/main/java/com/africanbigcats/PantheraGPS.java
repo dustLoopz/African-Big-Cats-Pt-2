@@ -30,6 +30,9 @@ public class PantheraGPS {
         this.name = name;
         this.species = "pantheraGPS";
 
+        //Limits of Latitude in Africa  +- 35
+        //Limits of Longitude in Africa  -18, +55
+
         // seed the random number generators for repeatable results
         this.longitudeRandom = new Random();
         this.longitudeRandom.setSeed(this.seed(name + "longitude"));
@@ -96,9 +99,19 @@ public class PantheraGPS {
         return longitude;
     }
 
+    // Mutator for Longitude
+    public void longitude(Float newLongitude) {
+        this.longitude = newLongitude; 
+    }
+
     // latitude of the panthera
     public Float latitude() {
         return latitude;
+    }
+
+    // Mutator for Latitude
+    public void latitude(Float newLatitude) {
+        this.latitude = newLatitude; 
     }
 
 
