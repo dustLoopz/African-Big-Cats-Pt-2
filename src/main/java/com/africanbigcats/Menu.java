@@ -297,6 +297,7 @@ public class Menu {
             System.out.println("No Match Found for " + catName + "!?");
             printLine();
             System.out.println();
+            cat = null;
         }
 
         return cat; 
@@ -320,13 +321,15 @@ public class Menu {
         System.out.println();
 
         if (cat1 != "" && cat2 != ""){
-            System.out.print("Cat Names: " + cat1 + " and " + cat2 + "\n");
-            
+
             //Get Cat 1 and Cat 2
             Panthera catObj1 = executeFind(catList, cat1);
             Panthera catObj2 = executeFind(catList, cat2);
 
             if (catObj1 != null && catObj2 != null){
+
+                System.out.print("Cat Names: " + cat1 + " and " + cat2 + "\n");
+
                 //Get Longitude
                 Float longitude1 = catObj1.longitude();
                 Float longitude2 = catObj2.longitude();
@@ -344,7 +347,7 @@ public class Menu {
                 //Print Results
                 System.out.print("Distance Between Cats = " + df.format(distance) + "\n");
             } else{
-                System.out.print("Cat not found!\n");
+                System.out.print("Not all cats found. Risk report failed!\n\n");
             }
             
         } else{
