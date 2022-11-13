@@ -8,8 +8,6 @@ import java.util.Random;
 public class PantheraGPS {
 
     // constants
-    private final Integer maxLongitude = 1000;
-    private final Integer maxLatitude = 1000;
     protected final float minSpeed = 0f;
     protected final float maxSpeed = 50.0f;
 
@@ -40,8 +38,8 @@ public class PantheraGPS {
         this.latitudeRandom.setSeed(this.seed(name + "latitude"));
 
         // move the panthera into it's initial position
-        this.longitude = longitudeRandom.nextFloat() * maxLongitude;
-        this.latitude = latitudeRandom.nextFloat() * maxLatitude;
+        this.longitude = longitudeRandom.nextFloat(73) - 18;
+        this.latitude = latitudeRandom.nextFloat(70) - 35;
 
     }
 

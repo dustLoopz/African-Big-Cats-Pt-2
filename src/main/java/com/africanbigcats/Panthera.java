@@ -65,8 +65,8 @@ public class Panthera extends PantheraGPS {
         Random timeRandomLat = new Random();
         Random timeRandomLong = new Random();
 
-        this.latitude(this.latitude() + (timeRandomLat.nextFloat(2)-1) * this.speed);
-        this.longitude(this.longitude() + (timeRandomLong.nextFloat(2)-1) * this.speed);
+        this.latitude(this.latitude() + (timeRandomLat.nextFloat(2)-1) * (this.speed/10));
+        this.longitude(this.longitude() + (timeRandomLong.nextFloat(2)-1) * (this.speed/10));
     }
 
     // Weight of the panthera
